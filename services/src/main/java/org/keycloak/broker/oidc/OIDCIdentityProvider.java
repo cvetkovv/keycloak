@@ -891,7 +891,7 @@ public class OIDCIdentityProvider extends AbstractOAuth2IdentityProvider<OIDCIde
 
 
     }
-
+    //Azure AD does not provide {@link #SUPPORTED_TOKEN_TYPES}
     protected boolean isTokenTypeSupported(JsonWebToken parsedToken) {
         String type = parsedToken.getType();
         return Objects.isNull(type) || SUPPORTED_TOKEN_TYPES.contains(type);
